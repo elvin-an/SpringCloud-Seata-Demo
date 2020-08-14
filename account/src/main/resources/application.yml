@@ -1,0 +1,19 @@
+server:
+  port: 8081
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: account
+  cloud:
+    alibaba:
+      seata:
+        tx-service-group: my_test_tx_group
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/account
+    username: root
